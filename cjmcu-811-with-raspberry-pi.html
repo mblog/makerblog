@@ -43,15 +43,13 @@ The tempature is required for calibration of the sensor. The CO2 concentration i
 <p>To connect the sensor with a Raspberry Pi we need to enable the I2C Interface. Additional we need to slow down the speed/baudrate of the I2C bus to 10khz. To change the bus speed we need to add an addtional line to the config.txt file.</p>
 <div class="highlight"><pre><span></span>sudo nano /boot/config.txt
 </pre></div>
-
-
 <p>Change bus speed with the additonal line:</p>
 <blockquote>
 <p>dtparam=i2c_baudrate=10000</p>
 </blockquote>
 <p>During my test I found some information about problems and inconsistent bus speeds with some Raspberry Pi models, but with my Raspberry Pi 3 B/B+ I can’t figure out any issues regarding the connection to the sensor.</p>
 <p>After a reboot we can connect the sensor with the Pi:</p>
-<p 200 _="%" _images_sketch_CJMCU811.png="/images/sketch_CJMCU811.png" img><img alt="sketch" src="https://www.makerblog.info/images/sketch_CJMCU811.png"></p>
+<p><img alt="sketch" src="https://www.makerblog.info/images/sketch_CJMCU811.png" style="width: 921px; height: auto;"/></p>
 <p>You can check if the Pi can connect to the sensor with the terminal command “i2cdetect -y 1”. If you see the number “5a” with the output table.</p>
 <h2>The Python code</h2>
 <p>There is an Adafruit code which can be easily installed over “pip” and from GitHub: <a href="https://learn.adafruit.com/adafruit-ccs811-air-quality-sensor?view=all#install-python-software-8-1">https://learn.adafruit.com/adafruit-ccs811-air-quality-sensor?view=all#install-python-software-8-1</a></p>
@@ -62,10 +60,8 @@ The tempature is required for calibration of the sensor. The CO2 concentration i
 <span class="nb">cd</span> CJMCU-811
 python ccs811.py
 </pre></div>
-
-
 <p>If everthing works correctly you should see an output like this (default measure interval 60 seconds):
-<img alt="CJMCU-811 Output" src="https://www.makerblog.info/images/output.png"></p>
+<img alt="CJMCU-811 Output" src="https://www.makerblog.info/images/output.png" style="width: 487px; height: auto;"/></p>
     </div><!-- /.entry-content -->
 
   </article>
