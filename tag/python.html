@@ -46,8 +46,7 @@ The tempature is required for calibration of the sensor. The CO2 concentration i
 </blockquote>
 <p>During my test I found some information about problems and inconsistent bus speeds with some Raspberry Pi models, but with my Raspberry Pi 3 B/B+ I can’t figure out any issues regarding the connection to the sensor.</p>
 <p>After a reboot we can connect the sensor with the Pi:</p>
-<p><img alt="sketch" src="https://www.makerblog.info/images/sketch_CJMCU811.png">
-{% img {static}/images/sketch_CJMCU811.png [200] [title text | "title text" ["alt text"]] %}</p>
+<p 200 _="%" _images_sketch_CJMCU811.png="/images/sketch_CJMCU811.png" img><img alt="sketch" src="https://www.makerblog.info/images/sketch_CJMCU811.png"></p>
 <p>You can check if the Pi can connect to the sensor with the terminal command “i2cdetect -y 1”. If you see the number “5a” with the output table.</p>
 <h2>The Python code</h2>
 <p>There is an Adafruit code which can be easily installed over “pip” and from GitHub: <a href="https://learn.adafruit.com/adafruit-ccs811-air-quality-sensor?view=all#install-python-software-8-1">https://learn.adafruit.com/adafruit-ccs811-air-quality-sensor?view=all#install-python-software-8-1</a></p>
